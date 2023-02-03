@@ -1,0 +1,34 @@
+--Door_Unlocker--------------------------------------------------
+	local n1 = math.ceil(key_code%10)
+	local n2 = math.floor((key_code/10)%10)
+	local n3 = math.floor((key_code/100)%10)
+	local n4 = math.floor((key_code/1000)%10)
+	if n1 == 0 then  n1 = "0" elseif n1 == 1 then  n1 = "1" elseif n1 == 2 then  n1 = "2" elseif n1 == 3 then  n1 = "3" elseif n1 == 4 then  n1 = "4" elseif n1 == 5 then  n1 = "5" elseif n1 == 6 then  n1 = "6" elseif n1 == 7 then  n1 = "7" elseif n1 == 8 then  n1 = "8" elseif n1 == 9 then  n1 = "9" end
+	if n2 == 0 then  n2 = "0" elseif n2 == 1 then  n2 = "1" elseif n2 == 2 then  n2 = "2" elseif n2 == 3 then  n2 = "3" elseif n2 == 4 then  n2 = "4" elseif n2 == 5 then  n2 = "5" elseif n2 == 6 then  n2 = "6" elseif n2 == 7 then  n2 = "7" elseif n2 == 8 then  n2 = "8" elseif n2 == 9 then  n2 = "9" end
+	if n3 == 0 then  n3 = "0" elseif n3 == 1 then  n3 = "1" elseif n3 == 2 then  n3 = "2" elseif n3 == 3 then  n3 = "3" elseif n3 == 4 then  n3 = "4" elseif n3 == 5 then  n3 = "5" elseif n3 == 6 then  n3 = "6" elseif n3 == 7 then  n3 = "7" elseif n3 == 8 then  n3 = "8" elseif n3 == 9 then  n3 = "9" end
+	if n4 == 0 then  n4 = "0" elseif n4 == 1 then  n4 = "1" elseif n4 == 2 then  n4 = "2" elseif n4 == 3 then  n4 = "3" elseif n4 == 4 then  n4 = "4" elseif n4 == 5 then  n4 = "5" elseif n4 == 6 then  n4 = "6" elseif n4 == 7 then  n4 = "7" elseif n4 == 8 then  n4 = "8" elseif n4 == 9 then  n4 = "9" end
+	if key_code == 0 then
+		return
+	else
+		if (event == "MOUSE_BUTTON_PRESSED" and arg == door_unlocker) then
+			PressKey("e")
+			sasd2441(250)
+			MoveMouseRelative(50, 50)
+			sasd2441(70)
+			PressMouseButton(1)
+			sasd2441(1)
+			ReleaseMouseButton(1)
+			sasd2441(70)
+			ReleaseKey("e")
+			sasd2441(40)
+			PressAndReleaseKey(n4)
+			sasd2441(40)
+			PressAndReleaseKey(n3)
+			sasd2441(40)
+			PressAndReleaseKey(n2)
+			sasd2441(40)
+			PressAndReleaseKey(n1)
+			sasd2441(40)
+		end
+	end
+end
